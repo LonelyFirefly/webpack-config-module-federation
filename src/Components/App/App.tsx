@@ -1,5 +1,6 @@
-import Login from "../Login";
-import "./App.scss";
+import { Link, Outlet } from "react-router-dom";
+import classes from "./app.module.scss";
+
 import { useState } from "react";
 
 export const App = () => {
@@ -7,10 +8,18 @@ export const App = () => {
 
     return (
         <div>
+            <Link to={"/about"}>about</Link>
+            <br />
+            <Link to={"/shop"}>shop</Link>
+            <br />
+            <p className={classes.value}>Заголовок</p>
             {counter}
-            <button onClick={() => setCounter((prev) => prev + 1)}>
+            <button
+                className={classes.button}
+                onClick={() => setCounter((prev) => prev + 1)}
+            >
                 <span>increment</span>
-                <Login />
+                <Outlet />
             </button>
         </div>
     );

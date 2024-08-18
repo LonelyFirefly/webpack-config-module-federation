@@ -1,7 +1,11 @@
-button {
+.button {
     background-color: blueviolet;
 
     & span {
         color: whitesmoke;
     }
+}
+
+.value {
+    font-size: 100px;
 }
