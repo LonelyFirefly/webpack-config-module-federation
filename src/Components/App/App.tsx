@@ -1,13 +1,14 @@
 import { Link, Outlet } from "react-router-dom";
 import classes from "./app.module.scss";
-
 import { useState } from "react";
+import AvatarPng from "@/assets/avatar.png";
 
 export const App = () => {
     const [counter, setCounter] = useState(0);
 
     return (
         <div>
+            <div>{AvatarPng}</div>
             <Link to={"/about"}>about</Link>
             <br />
             <Link to={"/shop"}>shop</Link>
